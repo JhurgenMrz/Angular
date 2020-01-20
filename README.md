@@ -12,3 +12,5 @@ En base a una condicional
 <div *ngIf="condition">
     Content to render when condition is true
 <div>
+
+USO DE ngFor : Se usa generalmente cómo ngForOf, nos sirve para hacer una iteración de un Array
