@@ -1,6 +1,8 @@
 <img [src]="product.image" alt="product.title" />
 <div class="product__info">
-	<h3>{{ product.title }}</h3>
-	<strong>{{ product.price }}</strong>
+	<h3>{{ product.title | uppercase }}</h3>
+	<strong>{{ product.price | currency }}</strong>
+	<p>{{ product.description | slice:0:10}}</p>
+	<p> {{ today | date:'medium' }} </p>
 	<button (click)="addCart()">Agregar al Carrito</button>
 </div>
