@@ -1,33 +1,28 @@
-<input type="text" [(ngModel)]="title" >
+<input type="text" [(ngModel)]="title" />
 {{ title }}
 
-<app-product></app-product>
-
-<div *ngIf="title === 'Jhurgen' ">
+<div *ngIf="title === 'Jhurgen'">
   This is a div
 </div>
 
 <div [ngSwitch]="title">
-  <p *ngSwitchCase="'jhurgen'" >Este es Jhurgen</p>
-  <p *ngSwitchCase="'juan'" >Este es Juan</p>
+  <p *ngSwitchCase="'jhurgen'">Este es Jhurgen</p>
+  <p *ngSwitchCase="'juan'">Este es Juan</p>
   <p *ngSwitchCase="'julian'">Este es Julian</p>
   <p *ngSwitchCase="'pablo'">Este es Pablo</p>
-  <p *ngSwitchDefault >No hay match</p>
-</div >
+  <p *ngSwitchDefault>No hay match</p>
+</div>
 
-<button (click)="addItem()" >Add Item </button>
+<button (click)="addItem()">Add Item</button>
 
 <ul>
   <li *ngIf="items.length === 0">La lista esta vacia</li>
   <li *ngFor="let name of items; index as i">
-    {{ name }}  {{i}}
+    {{ name }} {{ i }}
     <button (click)="deleteItem(i)">Delete</button>
   </li>
 </ul>
 
-
 <div *ngFor="let product of products">
-  {{ product.title }}
-  <img [src]="product.image" alt="product.title">
-  {{product.price}}
+  <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
 </div>
