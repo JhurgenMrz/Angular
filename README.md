@@ -21,3 +21,6 @@ ng lint ==> Para hacer un checkeo a tu codigo si cumple con el linter
 GENERADORES
 
 Generar un componente : ng g c <Nombre_del_Componente>
+
+ng g pipe <pipename>
+ng g p <pipename>
