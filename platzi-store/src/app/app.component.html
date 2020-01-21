@@ -2,27 +2,31 @@
 {{ title }}
 
 <div *ngIf="title === 'Jhurgen'">
-  This is a div
+	This is a div
 </div>
 
 <div [ngSwitch]="title">
-  <p *ngSwitchCase="'jhurgen'">Este es Jhurgen</p>
-  <p *ngSwitchCase="'juan'">Este es Juan</p>
-  <p *ngSwitchCase="'julian'">Este es Julian</p>
-  <p *ngSwitchCase="'pablo'">Este es Pablo</p>
-  <p *ngSwitchDefault>No hay match</p>
+	<p *ngSwitchCase="'jhurgen'">Este es Jhurgen</p>
+	<p *ngSwitchCase="'juan'">Este es Juan</p>
+	<p *ngSwitchCase="'julian'">Este es Julian</p>
+	<p *ngSwitchCase="'pablo'">Este es Pablo</p>
+	<p *ngSwitchDefault>No hay match</p>
 </div>
 
 <button (click)="addItem()">Add Item</button>
 
 <ul>
-  <li *ngIf="items.length === 0">La lista esta vacia</li>
-  <li *ngFor="let name of items; index as i">
-    {{ name }} {{ i }}
-    <button (click)="deleteItem(i)">Delete</button>
-  </li>
+	<li *ngIf="items.length === 0">La lista esta vacia</li>
+	<li *ngFor="let name of items; index as i">
+		{{ name }} {{ i }}
+		<button (click)="deleteItem(i)">Delete</button>
+	</li>
 </ul>
 
-<div *ngFor="let product of products">
-  <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
+<div class="product-grid">
+	<app-product
+		*ngFor="let product of products"
+		(productClicked)="clickProduct($event)"
+		[product]="product"
+	></app-product>
 </div>
