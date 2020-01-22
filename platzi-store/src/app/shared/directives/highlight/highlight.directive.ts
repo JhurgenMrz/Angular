@@ -1,9 +1,9 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appHightlight]'
+  selector: '[appHighlight]'
 })
-export class HightlightDirective {
+export class HighlightDirective {
 
   constructor(
     element: ElementRef

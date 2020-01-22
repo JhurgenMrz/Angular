@@ -1,22 +1,23 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './components/home/home.component';
+
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,
+        component: PageNotFoundComponent
     }
-];
+]
 
 @NgModule({
     imports: [
-        RouterModule.forChild(routes),
+        RouterModule.forChild(routes)
     ],
     exports: [
         RouterModule
     ]
 })
-export class HomeRoutingModule {
+export class PageNotFoundRoutingModule {
 
 }
