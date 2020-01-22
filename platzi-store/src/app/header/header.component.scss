@@ -1,0 +1,11 @@
+nav > a{
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+
+    &.active{
+        color: white;
+        background-color: red;
+    }
+}
+
