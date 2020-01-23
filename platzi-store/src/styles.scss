@@ -1,34 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/breakpoints";
+
 * {
 	box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,p,strong{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+strong {
 	margin: 0;
 	padding: 0;
 }
-button{
+button {
 	outline: none;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: black;
 }
-
-@import "./styles/breakpoints.scss";
-
-.product-grid {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-template-rows: repeat(auto-fill, 350px);
-	margin: 0 auto;
-
-
-	@include media(tablet) {
-		grid-template-columns: repeat(auto-fill, 250px);
-		grid-template-rows: repeat(auto-fill, 320px);
-	}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@include media(tablet) {
+	.container {
+		width: 100%;
+		// padding-right: 0px;
+		// padding-left: 0px;
+		// margin-right: auto;
+		// margin-left: auto;
+		padding: 20px 30px;
+	}
+}
