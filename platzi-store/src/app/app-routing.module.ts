@@ -31,12 +31,16 @@ const routes: Routes = [
         path: 'demo',
         loadChildren: () => import('./demo/demo.module').then(module => module.DemoModule)
       },
-      {
-        path: '**',
-        loadChildren: () => import('./page-not-found/page-not-found.module').then(module => module.PageNotFoundModule)
-      }
     ]
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(module => module.AdminModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(module => module.PageNotFoundModule)
+  }
 
 ];
 
