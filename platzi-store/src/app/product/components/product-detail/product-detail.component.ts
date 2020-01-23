@@ -33,7 +33,7 @@ export class ProductDetailComponent implements OnInit {
       });
   }
 
-  createProduct(){
+  createProduct() {
 
     const product: Product = {
       id: '77',
@@ -46,6 +46,24 @@ export class ProductDetailComponent implements OnInit {
     this.productService.createProduct(product)
       .subscribe(newProduct => {
         console.log(newProduct);
+      })
+  }
+
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      price: 80000,
+      description: "new Smarthphone"
+    }
+
+    this.productService.updateProduct('77', updateProduct)
+      .subscribe(updatedProduct => {
+        console.log(updatedProduct);
+      })
+  }
+  deleteProduct() {
+    this.productService.deleteProduct('12')
+      .subscribe(deletedProduct => {
+        console.log(deletedProduct);
       })
   }
 
