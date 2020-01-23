@@ -33,4 +33,20 @@ export class ProductDetailComponent implements OnInit {
       });
   }
 
+  createProduct(){
+
+    const product: Product = {
+      id: '77',
+      title: "new product",
+      image: "https://i01.appmifile.com/webfile/globalimg/products/pc/mi-9-lite/summary-new_12.jpg",
+      price: 70000,
+      description: "la la la la la"
+    }
+
+    this.productService.createProduct(product)
+      .subscribe(newProduct => {
+        console.log(newProduct);
+      })
+  }
+
 }
