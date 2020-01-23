@@ -10,7 +10,7 @@ import { Product } from '../../product.model';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product[];
+  products: Product[] = [];
 
   clickProduct(id: number) {
     console.log('product', id);
@@ -23,7 +23,15 @@ export class ProductsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.products = this.productService.getAllProducts();
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    this.productService.getAllProducts()
+      .subscribe(products => {
+        console.log(products);
+        this.products = products;
+      });
   }
 
 }

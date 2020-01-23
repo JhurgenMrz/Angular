@@ -21,6 +21,9 @@ ng lint ==> Para hacer un checkeo a tu codigo si cumple con el linter
 GENERADORES
 
 Generar un componente : ng g c <Nombre_del_Componente>
+                        ng g c <componentName> --routing
 
 ng g pipe <pipename>
 ng g p <pipename>
+
+ng g m <modulename>
