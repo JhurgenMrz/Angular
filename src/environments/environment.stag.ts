@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  url_api: 'http://platzi-store.stag.com'
+  url_api: 'https://platzi-store.herokuapp.com'
 
 };
