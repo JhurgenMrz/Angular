@@ -27,3 +27,7 @@ ng g pipe <pipename>
 ng g p <pipename>
 
 ng g m <modulename>
+
+others environments
+    ng serve -c=stag
+    ng build -c=stag

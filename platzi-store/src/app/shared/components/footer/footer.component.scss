@@ -22,3 +22,10 @@
 .footerInfo > strong{
     letter-spacing: 2px;
 }
+
+.footerInfo.contact{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 100px;
+}

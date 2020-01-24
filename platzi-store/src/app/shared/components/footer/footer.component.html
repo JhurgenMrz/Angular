@@ -15,13 +15,9 @@
 			<li>Map</li>
 		</ul>
 	</div>
-	<div class="footerInfo">
+	<div class="footerInfo contact">
 		<strong>Contacto</strong>
-		<ul>
-			<li>Tel: +8421578495</li>
-			<li>Twitter: @ecommerce</li>
-			<li>Instagram @ecommerce</li>
-			<li>Email: Siempreviva123@gmail.com</li>
-		</ul>
+		<input [formControl]="emailField" type="text"/>
+		<button *ngIf="emailField.valid" mat-raised-button (click)="sendEmail()">Enviar</button>
 	</div>
 </footer>
