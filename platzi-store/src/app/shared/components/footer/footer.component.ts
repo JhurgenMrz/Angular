@@ -14,8 +14,6 @@ export class FooterComponent implements OnInit {
     this.emailField = new FormControl('',
       [
         Validators.required,
-        Validators.minLength(5),
-        Validators.maxLength(20),
         Validators.email
       ]);
 

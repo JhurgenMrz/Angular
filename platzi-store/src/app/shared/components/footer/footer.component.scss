@@ -6,26 +6,29 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    padding: 10px 5px;
-    text-align: center;
-    background-color: rgb(52, 107, 211);
-    color: white;
-    
+	padding: 10px 5px;
+	text-align: center;
+	background-color: rgb(52, 107, 211);
+	color: white;
+
 	@include media(tablet) {
-        flex-direction: row;
+		flex-direction: row;
 		justify-content: space-evenly;
 		padding: 15px 10px;
-        text-align: left;
+		text-align: left;
 	}
 }
 
-.footerInfo > strong{
-    letter-spacing: 2px;
+.footerInfo > strong {
+	letter-spacing: 2px;
 }
 
-.footerInfo.contact{
+.footerInfo.contact {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	min-height: 100px;
+	strong {
+		margin-bottom: 5px;
+	}
 }

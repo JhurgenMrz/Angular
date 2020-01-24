@@ -17,7 +17,11 @@
 	</div>
 	<div class="footerInfo contact">
 		<strong>Contacto</strong>
-		<input [formControl]="emailField" type="text"/>
-		<button *ngIf="emailField.valid" mat-raised-button (click)="sendEmail()">Enviar</button>
+		<mat-form-field>
+			<input matInput placeholder="enter your email..." [formControl]="emailField" type="email" />
+		</mat-form-field>
+		<button [disabled]="emailField.invalid" mat-raised-button (click)="sendEmail()">
+			Enviar
+		</button>
 	</div>
 </footer>
